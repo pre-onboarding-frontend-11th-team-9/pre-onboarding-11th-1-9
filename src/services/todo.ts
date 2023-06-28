@@ -1,6 +1,6 @@
-import { API } from '../constants';
-import { TodoCreateData, TodoData, TodoUpdateData } from '../types';
-import apiClient from '../utils/apiClient';
+import { API } from '@/constants';
+import { TodoCreateData, TodoData, TodoUpdateData } from '@/types';
+import apiClient from '@/utils/apiClient';
 
 const todoService = {
   async getTodo() {

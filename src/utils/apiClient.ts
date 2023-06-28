@@ -1,5 +1,5 @@
+import { BASE_URL } from '@/constants';
 import axios, { InternalAxiosRequestConfig } from 'axios';
-import { BASE_URL } from '../constants';
 import storage from './storage';
 
 const apiClient = axios.create({

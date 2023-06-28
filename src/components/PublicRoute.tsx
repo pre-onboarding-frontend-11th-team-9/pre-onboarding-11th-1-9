@@ -1,5 +1,5 @@
+import storage from '@/utils/storage';
 import { Navigate } from 'react-router-dom';
-import storage from '../utils/storage';
 
 type PublicRouteProps = {
   element: JSX.Element;
