@@ -1,8 +1,8 @@
-import { Navigate } from 'react-router-dom';
+import LandingPage from '@/pages/Landing';
+import { PrivateRoute } from '../components/PrivateRoute';
+import { PublicRoute } from '../components/PublicRoute';
 import { Root } from '../components/Root';
 import { PATH } from '../constants';
-import { PublicRoute } from '../components/PublicRoute';
-import { PrivateRoute } from '../components/PrivateRoute';
 import SignInPage from '../pages/SignIn';
 import SignUpPage from '../pages/SignUp';
 import TodoPage from '../pages/Todo';
@@ -13,7 +13,7 @@ export const routes = [
     children: [
       {
         path: PATH.ROOT,
-        element: <Navigate to={PATH.SIGN_IN} />,
+        element: <LandingPage />,
       },
       {
         path: PATH.SIGN_IN,
