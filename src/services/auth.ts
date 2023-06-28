@@ -1,7 +1,7 @@
-import { PATH } from '../constants';
+import { PATH } from '@/constants';
+import apiClient from '@/utils/apiClient';
+import storage from '@/utils/storage';
 import { SignData, SignResponseData } from '../types';
-import apiClient from '../utils/apiClient';
-import storage from '../utils/storage';
 
 export const signIn = async (signData: SignData) => {
   try {
