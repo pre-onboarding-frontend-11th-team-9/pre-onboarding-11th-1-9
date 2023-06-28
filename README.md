@@ -1,46 +1,48 @@
-# Getting Started with Create React App
+# Week 1-1
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+> 동료학습을 통해서 팀에서 생각한 원티드 프리온보딩 프론트엔드 인턴십 [선발 과제](https://github.com/walking-sunset/selection-task)의 Best Pratice를 만들고 제출해주세요
 
-## Available Scripts
+![원티드 프리온보딩 프론트엔드 인턴십 배너 사진](https://static.wanted.co.kr/images/events/2909/b35918a6.jpg)
 
-In the project directory, you can run:
+## 기본 사항
 
-### `npm start`
+- 배포 링크 : https://example.com
+- 진행 기간 : 2023.06.27. ~ 2023.06.30.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## How To Run
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+```shell
+$ git clone https://github.com/pre-onboarding-frontend-11th-team-9/pre-onboarding-11th-1-9.git
+$ cd pre-onboarding-11th-1-9/
+$ npm install
+$ npm start
+```
 
-### `npm test`
+## Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 개발
 
-### `npm run build`
+- **React** v18.2
+- **TypeScript** v4.9
+- **React-Router** v6.14
+- **SASS** v1.63
+- **Axios** v1.4
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 일관성 있는 코드
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- **Prettier**
+- **Eslint**
+- **Husky**
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 구현 중점 사항
 
-### `npm run eject`
+## Team Info
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+| Name   | Github ID                                                                                                                                                                 | Role      |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| 김보라 | <a href="https://github.com/rockbell89" target="_blank"><img src="https://img.shields.io/badge/rockbell89-181717?style=flat-square&logo=github&logoColor=white"/></a>     | 팀장      |
+| 박용준 | <a href="https://github.com/yoopark" target="_blank"><img src="https://img.shields.io/badge/yoopark-181717?style=flat-square&logo=github&logoColor=white"/></a>           | Auth 파트 |
+| 김나현 | <a href="https://github.com/reezekim" target="_blank"><img src="https://img.shields.io/badge/reezekim-181717?style=flat-square&logo=github&logoColor=white"/></a>         | Auth 파트 |
+| 이동규 | <a href="https://github.com/tenenger7125" target="_blank"><img src="https://img.shields.io/badge/tenenger7125-181717?style=flat-square&logo=github&logoColor=white"/></a> | Todo 파트 |
+| 조은선 | <a href="https://github.com/es39" target="_blank"><img src="https://img.shields.io/badge/es39-181717?style=flat-square&logo=github&logoColor=white"/></a>                 | Todo 파트 |
+| 편경진 | <a href="https://github.com/kjindev" target="_blank"><img src="https://img.shields.io/badge/kjindev-181717?style=flat-square&logo=github&logoColor=white"/></a>           | 미참여    |
