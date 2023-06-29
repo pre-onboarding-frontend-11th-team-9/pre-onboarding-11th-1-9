@@ -14,32 +14,51 @@ const useTodo = () => {
     };
     e.currentTarget.newTodo.value = '';
 
-    const newTodo = await createTodo(form);
+    try {
+      const newTodo = await createTodo(form);
 
-    if (newTodo) setTodo([...todo, newTodo]);
+      setTodo([...todo, newTodo]);
+    } catch (err) {
+      console.error(err);
+      alert('Todo 생성 실패했습니다.');
+    }
   };
 
   const handleUpdateTodoSubmit = async (id, updateTodoData) => {
-    const updatedTodo = await updateTodo(id, updateTodoData);
+    try {
+      const updatedTodo = await updateTodo(id, updateTodoData);
 
-    setTodo(
-      todo.map((todoItem) =>
-        todoItem.id === id ? { ...todoItem, ...updatedTodo } : todoItem,
-      ),
-    );
+      setTodo(
+        todo.map((todoItem) =>
+          todoItem.id === id ? { ...todoItem, ...updatedTodo } : todoItem,
+        ),
+      );
+    } catch (err) {
+      console.error(err);
+      alert('Todo 수정 실패했습니다.');
+    }
   };
 
   const handleDeleteTodoClick = async (id) => {
-    await deleteTodo(id);
+    try {
+      await deleteTodo(id);
 
-    setTodo(todo.filter((todoItem) => todoItem.id !== id));
+      setTodo(todo.filter((todoItem) => todoItem.id !== id));
+    } catch (err) {
+      console.error('Todo 삭제 실패했습니다.');
+    }
   };
 
   useEffect(() => {
     (async () => {
-      const todo = (await getTodo()) ?? [];
+      try {
+        const todo = (await getTodo()) ?? [];
 
-      setTodo(todo);
+        setTodo(todo);
+      } catch (err) {
+        console.error(err);
+        alert('Todo 목록을 가져오는 것을 실패했습니다.');
+      }
     })();
   }, [setTodo]);
 
