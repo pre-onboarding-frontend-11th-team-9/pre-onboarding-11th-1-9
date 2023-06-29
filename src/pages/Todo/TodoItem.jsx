@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { TEST_ID } from '../../constants/testId';
 
 const TodoItem = ({
   todoItem: { id, todo, isCompleted },
@@ -36,7 +35,7 @@ const TodoItem = ({
         />
         {isEdited ? (
           <input
-            data-testid={TEST_ID.MODIFY_INPUT}
+            data-testid="modify-input"
             value={content}
             onChange={handleModifyTodo}
           />
@@ -45,13 +44,13 @@ const TodoItem = ({
         )}
       </label>
       <button
-        data-testid={isEdited ? TEST_ID.SUBMIT_BUTTON : TEST_ID.MODIFY_BUTTON}
+        data-testid={isEdited ? 'submit-button' : 'modify-button'}
         onClick={isEdited ? handleUpdateContentTodo : handleToggleEdit}
       >
         {isEdited ? '제출' : '수정'}
       </button>
       <button
-        data-testid={isEdited ? TEST_ID.CANCEL_BUTTON : TEST_ID.DELETE_BUTTON}
+        data-testid={isEdited ? 'cancel-button' : 'delete-button'}
         onClick={isEdited ? handleToggleEdit : () => handleDeleteTodoClick(id)}
       >
         {isEdited ? '취소' : '삭제'}
