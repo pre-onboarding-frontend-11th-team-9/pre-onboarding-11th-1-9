@@ -9,10 +9,6 @@ const apiClient = axios.create({
 const requestConfig = (config) => {
   const token = storage.getToken();
 
-  if (token === null) {
-    throw new Error('토큰이 존재하지 않습니다');
-  }
-
   config.headers.Authorization = `Bearer ${token}`;
   return config;
 };
