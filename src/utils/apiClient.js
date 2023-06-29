@@ -1,4 +1,4 @@
-import axios, { InternalAxiosRequestConfig } from 'axios';
+import axios from 'axios';
 import { BASE_URL } from '../constants';
 import storage from './storage';
 
@@ -6,9 +6,7 @@ const apiClient = axios.create({
   baseURL: BASE_URL,
 });
 
-const requestConfig = (
-  config: InternalAxiosRequestConfig,
-): InternalAxiosRequestConfig => {
+const requestConfig = (config) => {
   const token = storage.getToken();
 
   if (token === null) {

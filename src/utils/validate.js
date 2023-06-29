@@ -1,8 +1,8 @@
 const validate = {
-  email(email: string) {
+  email(email) {
     return email.includes('@');
   },
-  password(password: string) {
+  password(password) {
     return password.length >= 8;
   },
 };
