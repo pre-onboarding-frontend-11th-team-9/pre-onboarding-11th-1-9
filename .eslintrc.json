@@ -1,18 +1,11 @@
 {
-  "settings": {
-    "react": {
-      "version": "detect"
-    }
-  },
   "env": {
     "browser": true,
     "es2021": true
   },
-  "parser": "@typescript-eslint/parser",
   "extends": [
     "eslint:recommended", // ESLint 에서 권장하는 기본 규칙
     "plugin:prettier/recommended", // Prettier 포맷팅을 적용하고, ESLint와 충돌하는 규칙 비활성화
-    "plugin:@typescript-eslint/recommended", // Typescript 프로젝트에서 유용한 규칙
     "plugin:react/recommended", // React 프로젝트에서 유용한 규칙
     "plugin:react-hooks/recommended" // React Hooks를 사용할 때 유용한 규칙
   ],
@@ -20,8 +13,9 @@
     "ecmaVersion": "latest",
     "sourceType": "module"
   },
-  "plugins": ["react", "prettier", "@typescript-eslint"],
+  "plugins": ["react", "prettier"],
   "rules": {
+    "react/prop-types": "off",
     "react/react-in-jsx-scope": "off", // React JSX 스코프에서 React 사용 경고 무시
     "prettier/prettier": [
       // Prettier 규칙 위반 시 에러 표시

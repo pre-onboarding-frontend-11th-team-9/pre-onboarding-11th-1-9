@@ -4,7 +4,7 @@ const storage = {
   getToken() {
     return localStorage.getItem(TOKEN_NAME);
   },
-  setToken(token: string) {
+  setToken(token) {
     localStorage.setItem(TOKEN_NAME, token);
   },
   removeToken() {
