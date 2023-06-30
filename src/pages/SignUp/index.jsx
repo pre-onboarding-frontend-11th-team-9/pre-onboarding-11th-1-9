@@ -18,7 +18,7 @@ const SignUpPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="card">
       <form onSubmit={handleSignUpSubmit}>
         <h2>회원가입</h2>
         <input

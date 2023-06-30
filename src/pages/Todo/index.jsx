@@ -11,7 +11,8 @@ const TodoPage = () => {
   } = useTodo();
 
   return (
-    <div>
+    <div className="card">
+      <h2>할 일 목록</h2>
       <TodoInput handleCreateTodoSubmit={handleCreateTodoSubmit} />
       <TodoList {...{ todo, handleUpdateTodoSubmit, handleDeleteTodoClick }} />
     </div>

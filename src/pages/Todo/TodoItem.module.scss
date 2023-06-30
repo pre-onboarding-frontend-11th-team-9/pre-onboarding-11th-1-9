@@ -1,0 +1,19 @@
+.todo_item {
+  list-style: none;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  label {
+    width: 100%;
+    input[type='checkbox'] {
+      margin-right: 10px;
+    }
+  }
+  button {
+    white-space: nowrap;
+    padding: 0 10px;
+    + button {
+      margin-left: 4px;
+    }
+  }
+}

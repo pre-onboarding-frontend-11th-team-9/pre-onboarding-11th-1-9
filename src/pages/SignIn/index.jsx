@@ -18,7 +18,7 @@ const SignInPage = () => {
   const navigate = useNavigate();
 
   return (
-    <div>
+    <div className="card">
       <form onSubmit={handleSignInSubmit}>
         <h2>로그인</h2>
         <input
@@ -37,11 +37,20 @@ const SignInPage = () => {
           value={form.password}
           onChange={handleInputChange}
         />
-        <button data-testid="signin-button" type="submit" disabled={isDisabled}>
+        <button
+          data-testid="signin-button"
+          type="submit"
+          disabled={isDisabled}
+          className="btn btn-primary full"
+        >
           로그인
         </button>
       </form>
-      <button type="button" onClick={() => navigate(PATH.SIGN_UP)}>
+      <button
+        type="button"
+        onClick={() => navigate(PATH.SIGN_UP)}
+        className="btn full"
+      >
         회원가입 하러가기
       </button>
     </div>
