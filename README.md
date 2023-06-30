@@ -96,6 +96,58 @@ export default validate;
 ### 커스텀 훅 활용
 - useForm 과 useTodo로 커스텀 훅을 구현하여 데이터의 상태 관리와 api호출 구현하의
 컴포넌트의 재사용성과 유지보수성을 높임
+```js
+export const useForm = (initialForm) => {
+  const [form, setForm] = useState(initialForm);
+  const navigate = useNavigate();
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setForm({ ...form, [name]: value });
+  };
+
+  const handleSignInSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      const res = await authService.signIn(form);
+      storage.setToken(res.data.access_token);
+      navigate(PATH.TODO);
+      alert('로그인에 성공했습니다.');
+    } catch (err) {
+      console.error(err);
+      alert('로그인에 실패했습니다.');
+    }
+  };
+
+  const handleSignUpSubmit = async (e) => {
+    e.preventDefault();
+
+    try {
+      await authService.signUp(form);
+      navigate(PATH.SIGN_IN);
+      alert('회원가입에 성공했습니다. 로그인 화면으로 이동합니다.');
+    } catch (err) {
+      console.error(err);
+      alert('회원가입에 실패했습니다.');
+    }
+  };
+
+  const handleSignOutSubmit = () => {
+    storage.removeToken();
+    navigate(PATH.ROOT);
+  };
+
+  return {
+    form,
+    handleInputChange,
+    handleSignInSubmit,
+    handleSignUpSubmit,
+    handleSignOutSubmit,
+  };
+};
+
+```
 
 ### 상수관리
 - API URL, 라우트 경로 등을 상수로 관리하여 가독성 및 유지보수성을 높임
