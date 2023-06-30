@@ -55,19 +55,62 @@ $ npm start
 
 - utils 폴더에 localStorage 관련 함수를 구현 -> 관심사 분리
 - access_token을 상수로 관리하여 관리가 용이하도록 하게 함
+```js
+const TOKEN_NAME = 'access_token';
+
+const storage = {
+  getToken() {
+    return localStorage.getItem(TOKEN_NAME);
+  },
+  setToken(token) {
+    localStorage.setItem(TOKEN_NAME, token);
+  },
+  removeToken() {
+    localStorage.removeItem(TOKEN_NAME);
+  },
+};
+
+export default storage;
+
+
+```
 
 ### 유효성 검사
 - utils 폴더에 유효성 검증 관련 함수를 구현 -> 관심사 분리
+```js
+const validate = {
+  email(email) {
+    return email.includes('@');
+  },
+  password(password) {
+    return password.length >= 8;
+  },
+};
+
+export default validate;
+
+  
+```
 
 
 ### 커스텀 훅 활용
 - useForm 과 useTodo로 커스텀 훅을 구현하여 데이터의 상태 관리와 api호출 구현하의
 컴포넌트의 재사용성과 유지보수성을 높임
 
-## 상수관리
+### 상수관리
 - API URL, 라우트 경로 등을 상수로 관리하여 가독성 및 유지보수성을 높임
+```js
+export const BASE_URL = 'https://www.pre-onboarding-selection-task.shop';
 
-## createBrowserRotuer 적용
+export const API = {
+  SIGNUP: '/auth/signup',
+  SIGNIN: '/auth/signin',
+  TODO: '/todos',
+};
+
+```
+
+#### createBrowserRotuer 적용
 - 객체로 라우터를 관리하여 가독성을 높이고 , 확장성을 고려할 수 있음
 
 
