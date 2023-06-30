@@ -23,7 +23,6 @@ $ npm start
 ### 개발
 
 - **React** v18.2
-- **TypeScript** v4.9
 - **React-Router** v6.14
 - **SASS** v1.63
 - **Axios** v1.4
@@ -34,14 +33,49 @@ $ npm start
 - **Eslint**
 - **Husky**
 
-## 구현 중점 사항
+## 구현 기능
+
+- 회원가입
+- 로그인 / 로그아웃
+  - 이메일, 비밀번호 유효성 검사
+- 투두리스트
+  - 투두 리스트 작성
+  - 투두 리스트 수정
+  - 투두 리스트 삭제
+
+## 구현 방법 - Best Practice
+
+### API 처리
+
+- axios instance 사용하여 코드의 중복 해결 
+- api url을 상수로 관리하여 관리가 용이하도록 하게 함
+- service에 api 요청 로직을 구현하여 호출하여 사용
+
+### localstorage 관리
+
+- utils 폴더에 localStorage 관련 함수를 구현 -> 관심사 분리
+- access_token을 상수로 관리하여 관리가 용이하도록 하게 함
+
+### 유효성 검사
+- utils 폴더에 유효성 검증 관련 함수를 구현 -> 관심사 분리
+
+
+### 커스텀 훅 활용
+- useForm 과 useTodo로 커스텀 훅을 구현하여 데이터의 상태 관리와 api호출 구현하의
+컴포넌트의 재사용성과 유지보수성을 높임
+
+## 상수관리
+- API URL, 라우트 경로 등을 상수로 관리하여 가독성 및 유지보수성을 높임
+
+## createBrowserRotuer 적용
+- 객체로 라우터를 관리하여 가독성을 높이고 , 확장성을 고려할 수 있음
+
 
 ## Team Info
 
 | Name   | Github ID                                                                                                                                                                 | Role      |
 | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
 | 김보라 | <a href="https://github.com/rockbell89" target="_blank"><img src="https://img.shields.io/badge/rockbell89-181717?style=flat-square&logo=github&logoColor=white"/></a>     | 팀장      |
-| 박용준 | <a href="https://github.com/yoopark" target="_blank"><img src="https://img.shields.io/badge/yoopark-181717?style=flat-square&logo=github&logoColor=white"/></a>           | Auth 파트 |
 | 김나현 | <a href="https://github.com/reezekim" target="_blank"><img src="https://img.shields.io/badge/reezekim-181717?style=flat-square&logo=github&logoColor=white"/></a>         | Auth 파트 |
 | 이동규 | <a href="https://github.com/tenenger7125" target="_blank"><img src="https://img.shields.io/badge/tenenger7125-181717?style=flat-square&logo=github&logoColor=white"/></a> | Todo 파트 |
 | 조은선 | <a href="https://github.com/es39" target="_blank"><img src="https://img.shields.io/badge/es39-181717?style=flat-square&logo=github&logoColor=white"/></a>                 | Todo 파트 |
