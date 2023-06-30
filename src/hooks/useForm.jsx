@@ -40,10 +40,16 @@ export const useForm = (initialForm) => {
     }
   };
 
+  const handleSignOutSubmit = () => {
+    storage.removeToken();
+    navigate(PATH.ROOT);
+  };
+
   return {
     form,
     handleInputChange,
     handleSignInSubmit,
     handleSignUpSubmit,
+    handleSignOutSubmit,
   };
 };

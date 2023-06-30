@@ -37,11 +37,20 @@ const SignUpPage = () => {
           value={form.password}
           onChange={handleInputChange}
         />
-        <button data-testid="signup-button" type="submit" disabled={isDisabled}>
+        <button
+          data-testid="signup-button"
+          type="submit"
+          disabled={isDisabled}
+          className="btn btn-primary full"
+        >
           회원가입
         </button>
       </form>
-      <button type="button" onClick={() => navigate(PATH.SIGN_IN)}>
+      <button
+        type="button"
+        onClick={() => navigate(PATH.SIGN_IN)}
+        className="btn full"
+      >
         로그인 하러가기
       </button>
     </div>
