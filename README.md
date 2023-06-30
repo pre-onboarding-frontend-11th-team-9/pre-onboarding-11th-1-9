@@ -6,7 +6,7 @@
 
 ## 기본 사항
 
-- 배포 링크 : https://example.com
+- 배포 링크 : [DEMO](https://pre-onboarding-11th-1-9.vercel.app/signin)
 - 진행 기간 : 2023.06.27. ~ 2023.06.30.
 
 ## How To Run
